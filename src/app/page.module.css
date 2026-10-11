@@ -1,0 +1,565 @@
+
+/* Floating information cards */
+.orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px dashed #cdd5ff;
+  border-radius: 50%;
+}
+
+.orbitOne {
+  width: 280px;
+  height: 280px;
+}
+
+.orbitTwo {
+  width: 350px;
+  height: 350px;
+  border-color: #e1dafa;
+}
+
+.floatCard {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 17px;
+  border: 1px solid #edf0fa;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 15px 35px #293c7414;
+}
+
+.floatTop {
+  top: 25px;
+  right: 0;
+}
+
+.floatBottom {
+  bottom: 25px;
+  left: 0;
+}
+
+.floatIcon, .signalIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #eef1ff;
+  font-size: 22px;
+}
+
+.signalIcon {
+  color: #5368ed;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.floatCard strong, .floatCard small {
+  display: block;
+}
+
+.floatCard strong {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.floatCard small {
+  color: #8991a6;
+  font-size: 11px;
+}
+
+/* Quick statistics */
+.stats {
+  max-width: 1112px;
+  margin: 0 auto 75px;
+  padding: 23px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border: 1px solid #eaedf6;
+  border-radius: 20px;
+  background: white;
+}
+
+.stats div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #68738c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stats strong { font-size: 23px; }
+
+/* Plans and filters */
+.plansSection {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 15px 24px 85px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.sectionLabel {
+  color: #5268ed;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.sectionHead h2, .howIntro h2 {
+  margin: 9px 0;
+  font-size: clamp(27px, 4vw, 36px);
+  letter-spacing: -1px;
+}
+
+.sectionHead p, .howIntro > p {
+  margin: 0;
+  color: #818aa1;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.demoBadge, .demoTag {
+  display: inline-block;
+  padding: 8px 11px;
+  border: 1px solid #e5e9f7;
+  border-radius: 9px;
+  color: #697591;
+  background: #fff;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid #e9edf6;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 24px #283c7008;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 13px;
+  border: 1px solid #e6eaf3;
+  border-radius: 11px;
+  background: #fbfcff;
+}
+
+.searchBox > span {
+  color: #697cf0;
+  font-size: 27px;
+}
+
+.searchBox input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 0;
+  border: 0;
+  outline: none;
+  color: #17203b;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+}
+
+.filterField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.filterField > span {
+  color: #818aa1;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.filterField select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 9px;
+  border: 1px solid #e6eaf3;
+  border-radius: 10px;
+  outline-color: #8293ff;
+  color: #343d57;
+  background: #fbfcff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.resultsLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 27px 0 17px;
+  color: #77819a;
+  font-size: 13px;
+}
+
+.resultsLine strong {
+  color: #3f5fe6;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e8ebf4;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 0 7px 22px #1c2c5907;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #d6dcff;
+  box-shadow: 0 15px 32px #344b9012;
+}
+
+.popular {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: white;
+  background: #5368ef;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.flag {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 57px;
+  height: 57px;
+  border: 1px solid #edf0f8;
+  border-radius: 16px;
+  background: #f8f9ff;
+  font-size: 32px;
+}
+
+.countryInfo { min-width: 0; flex: 1; }
+
+.countryInfo h3 {
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+  font-size: 17px;
+}
+
+.countryInfo p {
+  margin: 0;
+  color: #9299ac;
+  font-size: 11px;
+}
+
+.arrow {
+  align-self: flex-start;
+  color: #a4acc0;
+  font-size: 18px;
+}
+
+.planData {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #edf0f6;
+  border-bottom: 1px solid #edf0f6;
+}
+
+.planData div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.planData div + div {
+  padding-right: 14px;
+  border-right: 1px solid #edf0f6;
+}
+
+.planData strong {
+  font-size: 19px;
+}
+
+.planData span {
+  color: #8a93a8;
+  font-size: 11px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 19px 0;
+}
+
+.priceRow > div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.priceRow strong {
+  color: #405fe8;
+  font-size: 27px;
+}
+
+.priceRow > div > span {
+  color: #9199ad;
+  font-size: 11px;
+}
+
+.cardButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border: 1px solid #e0e6ff;
+  border-radius: 11px;
+  color: #4664e9;
+  background: #f7f8ff;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background .2s;
+}
+
+.cardButton:hover { background: #edf0ff; }
+
+.emptyState {
+  padding: 50px 20px;
+  border: 1px dashed #d9dfef;
+  border-radius: 18px;
+  text-align: center;
+  background: white;
+}
+
+.emptyState > span { font-size: 35px; }
+
+.emptyState h3 { margin: 15px 0 8px; }
+
+.emptyState p {
+  color: #7d879e;
+  font-size: 13px;
+}
+
+.resetButton {
+  margin-top: 12px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: #4c68ed;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* How it works */
+.howSection {
+  padding: 70px 24px 80px;
+  background: #f0f3ff;
+}
+
+.howIntro {
+  max-width: 1112px;
+  margin: 0 auto 30px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1112px;
+  margin: auto;
+}
+
+.steps article {
+  padding: 24px;
+  border: 1px solid #e4e8fa;
+  border-radius: 17px;
+  background: #fff;
+}
+
+.steps article > span {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  color: #5269ed;
+  background: #edf0ff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.steps h3 { margin: 18px 0 8px; font-size: 17px; }
+
+.steps p {
+  margin: 0;
+  color: #7e879c;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1160px;
+  margin: auto;
+  padding: 27px 24px;
+}
+
+.footer .logo { font-size: 19px; }
+.footer .logoMark { width: 34px; height: 34px; border-radius: 11px; }
+
+.footer p {
+  color: #8991a5;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.footer > a:last-child {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding-top: 48px;
+    padding-bottom: 45px;
+  }
+
+  .hero h1 { font-size: clamp(33px, 5vw, 46px); }
+
+  .globe { width: 175px; height: 175px; }
+  .globe span { font-size: 90px; }
+
+  .orbitOne { width: 230px; height: 230px; }
+  .orbitTwo { width: 280px; height: 280px; }
+
+  .floatCard { padding: 10px; gap: 8px; }
+  .floatIcon, .signalIcon { width: 34px; height: 34px; }
+
+  .filters { grid-template-columns: 1fr 1fr; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .stats { margin-right: 24px; margin-left: 24px; }
+}
+
+@media (max-width: 600px) {
+  .navInner { min-height: 68px; padding: 12px 17px; gap: 12px; }
+  .logo { font-size: 20px; }
+  .logoMark { width: 34px; height: 34px; }
+  .navLinks { display: none; }
+  .navButton { padding: 10px 11px; font-size: 11px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 43px 20px 32px;
+  }
+
+  .hero h1 {
+    margin-top: 21px;
+    font-size: clamp(34px, 9vw, 45px);
+    letter-spacing: -1.3px;
+  }
+
+  .heroText { font-size: 14px; }
+  .trustRow { gap: 10px 14px; font-size: 11px; }
+
+  .heroVisual { min-height: 260px; margin-top: 5px; }
+  .globe { width: 160px; height: 160px; }
+  .globe span { font-size: 83px; }
+  .orbitOne { width: 220px; height: 220px; }
+  .orbitTwo { width: 255px; height: 255px; }
+
+  .floatTop { top: 6px; right: 0; }
+  .floatBottom { bottom: 5px; left: 0; }
+  .floatCard strong { font-size: 11px; }
+  .floatCard small { font-size: 9px; }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin: 0 17px 45px;
+    padding: 20px;
+  }
+
+  .stats div { justify-content: flex-start; }
+
+  .plansSection { padding: 10px 17px 55px; }
+  .sectionHead { align-items: flex-start; flex-direction: column; gap: 13px; }
+  .sectionHead h2, .howIntro h2 { font-size: 29px; }
+  .filters { grid-template-columns: 1fr; padding: 13px; }
+  .searchBox { min-height: 48px; }
+  .filterField select { padding: 13px 10px; }
+  .grid { grid-template-columns: 1fr; gap: 19px; }
+  .card { padding: 22px; }
+
+  .howSection { padding: 52px 17px; }
+  .steps { grid-template-columns: 1fr; gap: 13px; }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 18px;
+    gap: 13px;
+  }
+
+  .footer p { margin: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+EOF
